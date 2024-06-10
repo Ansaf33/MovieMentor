@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/purchases.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+  <title>Your Purchases</title>
+</head>
+<body class="body">
+
+  <div class="heading">
+    <img src="images/purchasebag.svg" height="70px"/>
+    <h1>Your Purchases</h1>
+    <form action="/genre" method="get">
+      <button type="submit" class="comic-button">Browse Movies</button>
+    </form>
+  </div>
+
+
+  <% for(let i=0;i<name.length;i++){%>
+    <div class="list">
+      <ul>
+        <% const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']%>
+ 
+  
+           <% const min = (Math.floor(minute[i]/10) == 0)?"0"+minute[i].toString():minute[i].toString() %> 
+          <li><span><%=name[i]%> --- <%=title[i]%> ------------------------------------------------ Purchased on <%=days[day[i]]%> at <%=hour[i]%>:<%=min%> ------- 
+          Cost = $<%=cost[i]%></span></li>
+ 
+        
+      </ul>
+    </div>
+
+  <%}%>
+
+  <div class="cost">
+    <button class="button1" data-text="Awesome">
+      <span class="actual-text">&nbsp;items purchased.&nbsp;</span>
+      <span aria-hidden="true" class="hover-text">&nbsp;<%=name.length%>&nbsp;</span>
+  </button>
+  <button class="button1" data-text="Awesome">
+    <span class="actual-text">&nbsp;Total Cost.&nbsp;</span>
+    <span aria-hidden="true" class="hover-text">&nbsp;$<%=total%>&nbsp;</span>
+</button>
+    
+  </div>
+
+
+  
+</body>
+</html>

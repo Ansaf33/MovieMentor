@@ -1,0 +1,51 @@
+body{
+  background-color: #FFFF80;
+
+}
+
+.container{
+  display:flex;
+  justify-content: center;
+  font-family:"Reenie Beanie";
+  height:50vh;
+  align-items: center;
+  font-size:40px;
+  flex-direction: column;
+}
+
+
+
+h1{
+  margin:0px;
+}
+
+.buttoncontainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  height:5vh;
+}
+
+
+button {
+  background: #fbca1f;
+  font-family:"Reenie Beanie";
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}

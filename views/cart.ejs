@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/cart.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+
+  <title>Your Cart</title>
+</head>
+<body class="body">
+
+  <div class="heading">
+    <img src="images/trolley.svg" height="70px"/>
+    <%if( data.length === 0 ){%>
+      <h1> Looks like your cart is empty. </h1>
+        <form action="/genre" method="get">
+          <button type="submit" class="comic-button">Browse Movies</button>
+          </form>
+
+      
+    <%}
+    else{%>
+      <h1> Here's your cart.</h1>
+      
+      <form method="post" action="/purchases">
+  <button type="submit">
+  Purchase Items : $<%=total%>
+  </button>
+  </form>
+    <%}%>
+
+    
+  </div>
+
+  <div class="items">
+
+    <div class="nothing">
+    
+  </div>
+    <div class="list">
+      <ul>
+        <% const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']%>
+        <% if (data.length > 0) {%>
+        <% data.forEach((single)=>{%>
+           <% const minute = (Math.floor(single.minute/10) == 0)?"0"+single.minute.toString():single.minute.toString() %> 
+          <li><span><%=single.name%> --- <%=single.title%> ------------------------------------------------ Added to cart on <%=days[single.day]%> at <%=single.hour%>:<%=minute%> -- $<%=single.cost%></span></li>
+        <%})%>
+
+        <%}%>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+</html>

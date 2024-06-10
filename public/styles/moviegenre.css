@@ -1,0 +1,62 @@
+.body{
+  background-color:#FFAA80;
+}
+
+.select{
+  font-family:"Reenie Beanie";
+  font-size:50px;
+  display: flex;
+  justify-content: center;
+  height:30vh;
+  align-items: center;
+}
+
+.comic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.buttonList{
+  width:100%;
+  height:500px;
+}
+
+
+form{
+  display:flex;
+  flex-direction: row;
+  gap:20px;
+  height:20vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+button{
+  font-family:"Reenie Beanie";
+  font-size:30px;
+}

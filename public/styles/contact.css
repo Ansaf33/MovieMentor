@@ -1,0 +1,113 @@
+#navbar{
+  background-color: #FFAA80 ;
+}
+#navbarsExample03{
+  font-family:"Reenie Beanie";
+  font-size:30px;
+
+  
+}
+
+.body{
+  background-color:#FFFF80 ;
+}
+
+
+.writing{
+  display:flex;
+  justify-content: center;
+  height:40vh;
+  align-items: center;
+  width:100%;
+  font-family:"Reenie Beanie";
+  font-size:35px;
+}
+
+
+.contactdetails{
+  display:flex;
+  justify-content: center;
+  height:15h;
+  align-items: center;
+}
+
+
+.social {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.social .social-item {
+  margin: 0 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social .social-item .social-link {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+  transform: perspective(1000px) rotate(-30deg) skew(25deg)
+    translate(0, 0);
+  transition: all 0.4s ease;
+}
+
+.social .social-item .social-link::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  height: 100%;
+  width: 10px;
+  background: #b1b1b1;
+  transition: all 0.4s ease;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+.social .social-item .social-link::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -5px;
+  height: 10px;
+  width: 100%;
+  background: #b1b1b1;
+  transition: all 0.4s ease;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+.social .social-item .social-link:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.social .social-item a {
+  color: #FFAA80;
+}
+
+.social .social-item:hover a {
+  background: #FFAA80;
+}
+
+.social .social-item:hover a::before {
+  background: #79513c;
+}
+
+.social .social-item:hover a::after {
+  background: #79513c;
+}
+
