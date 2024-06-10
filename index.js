@@ -9,7 +9,7 @@ env.config();
 // ----------------------------------------------------------------------------------------------- CONSTANTS
 var name;
 var genre;
-const userURL = "mongodb+srv://"+process.env.USER_NAME+":"+process.env.PASSWORD_NAME+"@cluster0.3hp2qzo.mongodb.net/db?retryWrites=true&w=majority&appName=Cluster0";
+const userURL = process.env.MONGO_URL;
 const client = new MongoClient(userURL);
 
 let Cart=[];
